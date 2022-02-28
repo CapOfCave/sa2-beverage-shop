@@ -1,6 +1,6 @@
 drop table CUSTOMER if exists;
 drop table PRODUCT if exists;
-drop table ORDER if exists;
+drop table T_ORDER if exists;
 drop table ORDER_ITEM if exists;
 
 create table CUSTOMER
@@ -30,12 +30,12 @@ create table PRODUCT
     active           boolean
 );
 
-create table ORDER
+create table T_ORDER
 (
     id bigint identity primary key,
     customer_id bigint,
     order_date date,
-    order_type varchar(20)
+    order_type integer
 );
 
 create table ORDER_ITEM

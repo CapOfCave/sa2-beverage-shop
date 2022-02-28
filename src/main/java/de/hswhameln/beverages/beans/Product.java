@@ -12,6 +12,7 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    private String name;
     private String shortDescription;
     private String longDescription;
     private String productImage;
@@ -21,7 +22,8 @@ public class Product {
     public Product() {
     }
 
-    public Product(String shortDescription, String longDescription, String productImage, BigDecimal price, boolean active) {
+    public Product(String name, String shortDescription, String longDescription, String productImage, BigDecimal price, boolean active) {
+        this.name = name;
         this.shortDescription = shortDescription;
         this.longDescription = longDescription;
         this.productImage = productImage;
@@ -51,5 +53,9 @@ public class Product {
 
     public boolean isActive() {
         return active;
+    }
+
+    public String getName() {
+        return name;
     }
 }
