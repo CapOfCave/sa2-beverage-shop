@@ -1,0 +1,1 @@
+insert into CUSTOMER(id, prename, surname, password, birthdate, street, streetno, zipcode, city, country, iban, active) values (01, Max, Mustermann, '12345', 01-01-2000, 'Straße', '1a', '76543', 'Stadt', 'Land', '123456789123456', true);
