@@ -1,2 +1,8 @@
-package de.hswhameln.beverages.projections;public class CustomerDefault {
+package de.hswhameln.beverages.projections;
+
+public interface CustomerDefault {
+    long getId();
+    String getPrename();
+    String getSurname();
+    boolean isActive();
 }
