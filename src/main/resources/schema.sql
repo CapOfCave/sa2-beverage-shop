@@ -1,5 +1,7 @@
 drop table CUSTOMER if exists;
 drop table PRODUCT if exists;
+drop table ORDER if exists;
+drop table ORDER_ITEM if exists;
 
 create table CUSTOMER
 (
@@ -26,5 +28,23 @@ create table PRODUCT
     product_image     varchar(50),
     price            decimal(10,2),
     active           boolean
+);
+
+create table ORDER
+(
+    id bigint identity primary key,
+    customer_id bigint,
+    order_date date,
+    order_type varchar(20)
+);
+
+create table ORDER_ITEM
+(
+    id bigint identity primary key,
+    order_id bigint,
+    product_id bigint,
+    amount integer,
+    price decimal(10,2),
+    vat decimal(2,2)
 );
 
